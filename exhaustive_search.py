@@ -1,4 +1,4 @@
-def soccer_opponent_avoidance(F, k):
+def soccer_exhaustive(F, k):
     r, c = len(F), len(F[0])
     n = r + c - 2
     counter = 0
@@ -40,6 +40,6 @@ if __name__ == "__main__":
      ['.', '.', 'X', '.', 'X', '.', '.', '.'],
      ['.', '.', '.', '.', '.', '.', 'X', '.']]
     k = 1
-    result = soccer_opponent_avoidance(F, k)
-    print(result)
+    result = soccer_exhaustive(F, k)
+    print("Exhaustive Search Result:",result)
 

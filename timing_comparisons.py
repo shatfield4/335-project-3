@@ -2,7 +2,7 @@
 import random
 import timeit
 from dynamic_programming import soccer_dyn_prog
-from exhaustive_search import soccer_opponent_avoidance
+from exhaustive_search import soccer_exhaustive
 
 
 def generate_test_input(n):
@@ -21,7 +21,7 @@ for n in input_sizes:
     elapsed_time_dp = timeit.timeit(lambda: soccer_dyn_prog(F), number=1)
     dp_timings.append(elapsed_time_dp)
 
-    elapsed_time_es = timeit.timeit(lambda: soccer_opponent_avoidance(F, 1), number=1)
+    elapsed_time_es = timeit.timeit(lambda: soccer_exhaustive(F, 1), number=1)
     es_timings.append(elapsed_time_es)
 
 print("Dynamic Programming Timings:", dp_timings)
